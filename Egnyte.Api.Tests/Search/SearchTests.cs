@@ -73,7 +73,7 @@ namespace Egnyte.Api.Tests.Search
                 "Version5Version 45\nVersion 3\n\ngnyte brings its storage cloud closer to home\n\nFebruary 17, 2009\n\nhtt",
                 searchResults.Results[0].SnippetHtml);
             Assert.AreEqual("2c8e1083-47f8-4d57-94dc-fd05429b7ec3", searchResults.Results[0].EntryId);
-            Assert.AreEqual(new DateTime(2015, 01, 14, 22, 19, 29), searchResults.Results[0].LastModified);
+            Assert.AreEqual(new DateTime(2015, 01, 14, 22, 19, 29, DateTimeKind.Utc), searchResults.Results[0].LastModified.ToUniversalTime());
             Assert.AreEqual(1, searchResults.Results[0].NumberOfVersions);
             Assert.IsFalse(searchResults.Results[0].IsFolder);
         }
@@ -126,7 +126,7 @@ namespace Egnyte.Api.Tests.Search
                 "Version5Version 45\nVersion 3\n\ngnyte brings its storage cloud closer to home\n\nFebruary 17, 2009\n\nhtt",
                 searchResults.Results[0].SnippetHtml);
             Assert.AreEqual("2c8e1083-47f8-4d57-94dc-fd05429b7ec3", searchResults.Results[0].EntryId);
-            Assert.AreEqual(new DateTime(2015, 01, 14, 22, 19, 29), searchResults.Results[0].LastModified);
+            Assert.AreEqual(new DateTime(2015, 01, 14, 22, 19, 29, DateTimeKind.Utc), searchResults.Results[0].LastModified.ToUniversalTime());
             Assert.AreEqual(1, searchResults.Results[0].NumberOfVersions);
             Assert.IsFalse(searchResults.Results[0].IsFolder);
         }
