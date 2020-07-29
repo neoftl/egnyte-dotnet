@@ -70,7 +70,7 @@ namespace Egnyte.Api.Tests.Files
             var content = httpHandlerMock.GetRequestContentAsString();
             Assert.AreEqual(Checksum, result.Checksum);
             Assert.AreEqual("\"" + ETag + "\"", result.EntryId);
-            Assert.AreEqual(new DateTime(2012, 08, 26, 5, 55, 29), result.LastModified);
+            Assert.AreEqual(new DateTime(2012, 08, 26, 3, 55, 29, DateTimeKind.Utc), result.LastModified.ToUniversalTime());
             Assert.AreEqual("https://acme.egnyte.com/pubapi/v1/fs-content/path", requestMessage.RequestUri.ToString());
             Assert.AreEqual("file", content);
         }

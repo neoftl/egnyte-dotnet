@@ -36,7 +36,7 @@
             Assert.AreEqual(0x21, result.Data[1]);
             Assert.AreEqual(0x22, result.Data[2]);
             Assert.AreEqual(Checksum, result.Checksum);
-            Assert.AreEqual(new DateTime(2012, 08, 26, 5, 55, 29), result.LastModified);
+            Assert.AreEqual(new DateTime(2012, 08, 26, 3, 55, 29, DateTimeKind.Utc), result.LastModified.ToUniversalTime());
             Assert.AreEqual("\"" + ETag + "\"", result.ETag);
             Assert.AreEqual(ContentType, result.ContentType);
             Assert.AreEqual(ContentLength, result.ContentLength);
@@ -62,7 +62,7 @@
             Assert.AreEqual(0x21, result.Data[1]);
             Assert.AreEqual(0x22, result.Data[2]);
             Assert.AreEqual(Checksum, result.Checksum);
-            Assert.AreEqual(new DateTime(2012, 08, 26, 5, 55, 29), result.LastModified);
+            Assert.AreEqual(new DateTime(2012, 08, 26, 3, 55, 29, DateTimeKind.Utc), result.LastModified.ToUniversalTime());
             Assert.AreEqual("\"" + ETag + "\"", result.ETag);
             Assert.AreEqual(ContentType, result.ContentType);
             Assert.AreEqual(ContentLength, result.ContentLength);
@@ -112,7 +112,7 @@
             Assert.AreEqual(0x21, result.Data[1]);
             Assert.AreEqual(0x22, result.Data[2]);
             Assert.AreEqual(Checksum, result.Checksum);
-            Assert.AreEqual(new DateTime(2012, 08, 26, 5, 55, 29), result.LastModified);
+            Assert.AreEqual(new DateTime(2012, 08, 26, 3, 55, 29, DateTimeKind.Utc), result.LastModified.ToUniversalTime());
             Assert.AreEqual("\"" + ETag + "\"", result.ETag);
             Assert.AreEqual(ContentType, result.ContentType);
             Assert.AreEqual(ContentLength, result.ContentLength);
@@ -139,7 +139,7 @@
             Assert.AreEqual(0x21, result.Data[1]);
             Assert.AreEqual(0x22, result.Data[2]);
             Assert.AreEqual(Checksum, result.Checksum);
-            Assert.AreEqual(new DateTime(2012, 08, 26, 5, 55, 29), result.LastModified);
+            Assert.AreEqual(new DateTime(2012, 08, 26, 3, 55, 29, DateTimeKind.Utc), result.LastModified.ToUniversalTime());
             Assert.AreEqual("\"" + ETag + "\"", result.ETag);
             Assert.AreEqual(ContentType, result.ContentType);
             Assert.AreEqual(ContentLength, result.ContentLength);
